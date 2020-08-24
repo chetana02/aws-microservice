@@ -21,7 +21,7 @@ export default function SearchPage() {
 
   const onSubmit = (searchTerm) => {
   
-    const uri = `${baseUrl}search?title=${searchTerm}`;
+    const uri = `${baseUrl}?title=${searchTerm}`;
     axios.get(uri, axiosHeaders)
       .then(res => onSubmitSuccess(res))
       .catch(err => console.error(err));
