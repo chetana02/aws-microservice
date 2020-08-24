@@ -3,18 +3,18 @@ var axios = require('axios');
 var router = express.Router();
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-    
-    res.send('Express is the best!!!! and so is Chetana');
-    //res.send('Chetana is the best!!!!');
-    
-});
+//router.get('/', function(req, res, next) {
+//    
+//    res.send('Express is the best!!!! and so is Chetana');
+//    //res.send('Chetana is the best!!!!');
+//    
+//});
 
 const OMDB_API_KEY = 'e3ec511b';
 const OMDB_URL = 'http://www.omdbapi.com/';
 
 /* IMDB Search */
-router.get('/search', (req, res, next) => {
+router.get('/', (req, res, next) => {
     const title = req.query.title
     const url = `${OMDB_URL}?apikey=${OMDB_API_KEY}&s=${title}`
     axios.get(url)
